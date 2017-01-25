@@ -1,11 +1,8 @@
+import os
+import string
+
 import PyPDF2
 import nltk
-import string
-import operator
-import sys
-import os
-import glob
-
 from sklearn.feature_extraction.text import TfidfVectorizer
 
 nltk.download('punkt')
@@ -28,13 +25,14 @@ def stem_tokens(tokens):
 def normalize(text):
     return stem_tokens(nltk.word_tokenize(text.lower().translate(remove_punctuation_map)))
 
+
 vectorizer = TfidfVectorizer(tokenizer=normalize, stop_words=stopwords)
 
 
 def cosine_sim(text1, text2):
     try:
         tfidf = vectorizer.fit_transform([text1, text2])
-        return ((tfidf * tfidf.T).A)[0, 1]
+        return (tfidf * tfidf.T).A[0, 1]
     except Exception:
         return 0.0
 

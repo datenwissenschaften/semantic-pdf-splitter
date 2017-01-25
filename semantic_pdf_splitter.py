@@ -1,13 +1,11 @@
-import luigi
 import glob
-import requests
 import os
+import luigi
 
 from extractor import processPDF
 
 
 class ProcessPDF(luigi.Task):
-
     f = luigi.Parameter()
     fout = luigi.Parameter()
 
@@ -21,7 +19,6 @@ class ProcessPDF(luigi.Task):
 
 
 class GetFiles(luigi.Task):
-
     fin = luigi.Parameter()
     fout = luigi.Parameter()
 
@@ -31,6 +28,7 @@ class GetFiles(luigi.Task):
 
     def run(self):
         pass
+
 
 if __name__ == "__main__":
     luigi.run()
