@@ -2,19 +2,20 @@
 
 Playground for using [luigi](https://github.com/spotify/luigi/), [PyPDF2](https://github.com/mstamy2/PyPDF2) and [nltk](http://www.nltk.org/).
 
-Reads PDF Files from a given folder an splits it according to the cosine similarity of the extracted texts. Work load is balanced and can be monitored by luigi.
+Reads PDF Files from a given folder and splits it according to the cosine similarity of the extracted texts.
+Work load is balanced and monitored by luigi.
 
-Each file will be processed only once, as luigi detects which work is done.
+Each file will be processed only once, as luigi detects which work has already been done.
 
 ## Installation
 ```
-git clone .
+git clone https://github.com/MtnFranke/semantic-pdf-splitter
 
 pip install nltk
 pip install luigi
 pip install pypdf2
 
-touch stopwords.txt ### Add desired stop words to this text file, divided by newline
+touch stopwords.txt ### TODO: Add desired stop words to this text file, divided by newline
 ```
 
 ## Usage
