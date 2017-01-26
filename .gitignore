@@ -89,3 +89,5 @@ ENV/
 data/*.txt
 target/*.pdf
 stopwords.txt
+
+.idea
