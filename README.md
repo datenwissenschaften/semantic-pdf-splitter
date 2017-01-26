@@ -11,9 +11,7 @@ Each file will be processed only once, as luigi detects which work has already b
 ```
 git clone https://github.com/MtnFranke/semantic-pdf-splitter
 
-pip install nltk
-pip install luigi
-pip install pypdf2
+pip install -r requirements.txt
 
 touch stopwords.txt ### TODO: Add desired stop words to this text file, divided by newline
 ```

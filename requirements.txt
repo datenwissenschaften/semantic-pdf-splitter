@@ -1,0 +1,4 @@
+luigi==2.5.0
+nltk==3.2.1
+PyPDF2==1.26.0
+scikit_learn==0.18.1
